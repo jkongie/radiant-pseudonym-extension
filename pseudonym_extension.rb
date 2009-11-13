@@ -15,6 +15,7 @@ class PseudonymExtension < Radiant::Extension
   def activate
     # admin.tabs.add "Pseudonym", "/admin/pseudonym", :after => "Layouts", :visibility => [:all]
     admin.page.edit.add :extended_metadata, 'admin/pages/pseudonym_form'
+    Page.send :include, PseudonymTags
   end
   
   def deactivate

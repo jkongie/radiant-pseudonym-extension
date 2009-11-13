@@ -1,6 +1,5 @@
 - unless @page.virtual?
   %table.fieldset
     %tr
-      %td
-        = f.label :sitemap, "Pseudonym"
-        = f.text_field :sitemap
+      %th.label= f.label :pseudonym, "Pseudonym"
+      %td.textbox= f.text_field :pseudonym
